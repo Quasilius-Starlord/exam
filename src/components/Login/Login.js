@@ -15,8 +15,7 @@ const Login = props =>{
             <Heading />
             <InputFields
                 email={email} setEmail={setEmail}
-                password={password} setPassword={setPassword}
-                confPassword={confPassword} setConfPassword={setConfPassword} />
+                password={password} setPassword={setPassword} />
         
             <SocialMediaLogin />
             <Box justifyContent={'flex-end'} display='flex'>
@@ -24,7 +23,7 @@ const Login = props =>{
             </Box>
             <Box my={7} justifyContent={'space-around'} display='flex'>
                 <Typography color={'primary'}>Dont have and account ?</Typography>
-                <Button variant="contained" size="medium" onClick={()=>{navigate('/signup')}}>Create Account</Button>
+                <Button variant="contained" size="medium" onClick={e=>{e.preventDefault();navigate('/signup')}}>Create Account</Button>
             </Box>
         </Container>
     )

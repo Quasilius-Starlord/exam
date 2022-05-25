@@ -14,7 +14,7 @@ const InputFields = props => {
                 <Input value={props.password} onChange={e=>{props.setPassword(e.target.value)}} type="password" id={'password'}></Input>
             </FormControl>
             <FormControl margin="normal" fullWidth={false}>
-                <Button variant="contained" size="large">Login</Button>
+                <Button onClick={e=>{e.preventDefault()}} variant="contained" size="large">Login</Button>
             </FormControl>
         </Box>
     )
