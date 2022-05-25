@@ -13,8 +13,12 @@ const InputFields = props => {
                 <InputLabel htmlFor="password">Password</InputLabel>
                 <Input value={props.password} onChange={e=>{props.setPassword(e.target.value)}} type="password" id={'password'}></Input>
             </FormControl>
+            <FormControl margin="normal" fullWidth={true}>
+                <InputLabel htmlFor="confirm-password">Confirm Password</InputLabel>
+                <Input value={props.confPassword} onChange={e=>{props.setConfPassword(e.target.value)}} type="password" id={'confirm-password'}></Input>
+            </FormControl>
             <FormControl margin="normal" fullWidth={false}>
-                <Button variant="contained" size="large">Login</Button>
+                <Button variant="contained" size="large">Register</Button>
             </FormControl>
         </Box>
     )
